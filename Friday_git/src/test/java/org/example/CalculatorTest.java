@@ -48,6 +48,21 @@ class CalculatorTest {
         assertEquals(expected,actual);
     }
 
+    @Test
+    @DisplayName("Test med String og tal")
+    void Test5(){
+        int expected = 6;
+        int actual = instance.add("1,2,3");
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    @DisplayName("Test med Array og tal")
+    void Test6() {
+        int expected = 6;
+        int actual = instance.add(new int[]{1,2,3});
+        assertEquals(expected, actual);
+    }
 
 
 }
